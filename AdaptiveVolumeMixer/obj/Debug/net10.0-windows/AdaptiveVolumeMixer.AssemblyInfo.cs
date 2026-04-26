@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AdaptiveVolumeMixer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cacb6e0619c10b04bf0886b771d9aed8c101cbef")]
 [assembly: System.Reflection.AssemblyProductAttribute("AdaptiveVolumeMixer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AdaptiveVolumeMixer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
