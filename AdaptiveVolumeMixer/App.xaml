@@ -10,8 +10,11 @@
         <converters:LevelIndexToColorBrushConverter x:Key="LevelIndexToColor"/>
 
         <!-- 全局状态颜色 -->
-        <SolidColorBrush x:Key="PlayingColor" Color="#4CAF50"/>
-        <SolidColorBrush x:Key="SuppressedColor" Color="#FF9800"/>
-        <SolidColorBrush x:Key="IdleColor" Color="#9E9E9E"/>
+        <SolidColorBrush x:Key="PlayingColor"
+                Color="#4CAF50"/>
+        <SolidColorBrush x:Key="SuppressedColor"
+                Color="#FF9800"/>
+        <SolidColorBrush x:Key="IdleColor"
+                Color="#9E9E9E"/>
     </Application.Resources>
 </Application>

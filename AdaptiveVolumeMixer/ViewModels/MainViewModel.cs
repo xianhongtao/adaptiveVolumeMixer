@@ -36,6 +36,8 @@ public partial class MainViewModel : ObservableObject
     /// </summary>
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(IsNotMonitoring))]
+    [NotifyCanExecuteChangedFor(nameof(StartMonitoringCommand))]
+    [NotifyCanExecuteChangedFor(nameof(StopMonitoringCommand))]
     private bool _isMonitoring;
 
     public bool IsNotMonitoring => !IsMonitoring;
@@ -111,7 +113,7 @@ public partial class MainViewModel : ObservableObject
     /// <summary>
     /// 启动监控
     /// </summary>
-    [RelayCommand(CanExecute = nameof(IsNotMonitoring))]
+    [RelayCommand(CanExecute = nameof(CanStartMonitoring))]
     private void StartMonitoring()
     {
         _volumeController.Start();
@@ -122,13 +124,16 @@ public partial class MainViewModel : ObservableObject
     /// <summary>
     /// 停止监控
     /// </summary>
-    [RelayCommand(CanExecute = nameof(IsMonitoring))]
+    [RelayCommand(CanExecute = nameof(CanStopMonitoring))]
     private void StopMonitoring()
     {
         _volumeController.Stop();
         IsMonitoring = false;
         StatusText = "监控已停止";
     }
+
+    private bool CanStartMonitoring() => !IsMonitoring;
+    private bool CanStopMonitoring() => IsMonitoring;
 
     /// <summary>
     /// 从层级移除进程

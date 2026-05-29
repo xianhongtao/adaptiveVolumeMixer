@@ -509,7 +509,7 @@
                                         Value="运行中"/>
                                 <Style.Triggers>
                                     <DataTrigger Binding="{Binding IsMonitoring}"
-                                            Value="False">
+                                                 Value="False">
                                         <Setter Property="Text"
                                                 Value="已停止"/>
                                     </DataTrigger>
